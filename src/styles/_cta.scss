@@ -1,0 +1,26 @@
+@use 'variaveis';
+
+.cta {
+  padding: 5.6vw;
+
+  &__content {
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: linear-gradient(135deg, rgba(100, 33, 255, 0.18), rgba(0, 99, 229, 0.10));
+    padding: 24px;
+    max-width: 980px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__actions {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

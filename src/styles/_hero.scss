@@ -1,0 +1,51 @@
+@use 'variaveis';
+
+.hero {
+  padding: 5.6vw;
+  min-height: 78vh;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  background-image: url(../images/hero-mufasa.jpg);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(4, 7, 20, 0.15) 0%,
+      rgba(4, 7, 20, 0.75) 55%,
+      rgba(4, 7, 20, 1) 100%
+    );
+  }
+
+  &__content {
+    position: relative;
+    max-width: 860px;
+  }
+
+  &__eyebrow {
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.9;
+  }
+
+  &__subtitle {
+    margin-top: 12px;
+    max-width: 680px;
+  }
+
+  &__actions {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
